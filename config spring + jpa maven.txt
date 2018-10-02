@@ -1,0 +1,26 @@
+spring boot
+start.spring.io
+
+Maven project --- java --- 2.0.5
+group: br.senac.rn              mysql e jpa
+artifact: loja3
+
+src/main/java(onde fica as classes)
+    br.senac.rn.loja.model
+src/main/resource
+    application.properties
+        spring.datasource.dbcp2.driver-class-name=com.mysql.jdbc.Driver
+        spring.datasource.url=jdbc:mysql://localhost/loja2
+        spring.datasource.username=root
+        spring.datasource.password=
+        spring.jpa.hibernate.ddl-auto=update
+        spring.jpa.show-sql=true
+
+--------------------------------------------------------------------
+maven
+covert to JPA project
+
+--------------------------------------------------------------------
+service é a camada de regra de negócio
+
+repository = DAO
