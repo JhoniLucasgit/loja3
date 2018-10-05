@@ -13,17 +13,19 @@ import br.senac.rn.loja.model.Marca;
 import br.senac.rn.loja.service.MarcaService;
 
 @Controller
-@RequestMapping("/marca")
+@RequestMapping("marca")//rota url
 public class MarcaController {
 
 	@Autowired
 	private MarcaService service;
 		
-	@GetMapping("/lista")//requisição
+	@GetMapping//requisição(o que aparece na url)
 	public String listar(Model model) {
 		List<Marca> marcas = service.buscar();
 		model.addAttribute("marcas", marcas);
-		return "marca/lista";//pasta templates
+		return "marca/lista";//arquivo html dentro da pasta templates
 	}
+	
+	
 	
 }
